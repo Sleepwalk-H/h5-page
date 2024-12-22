@@ -12,6 +12,9 @@
             padding: 0;
             font-family: Arial, sans-serif;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* 粒子背景 */
@@ -25,10 +28,9 @@
         /* 页眉 */
         header {
             text-align: center;
-
             color: white;
+            //background: linear-gradient(45deg, #ff7e5f, #feb47b);
             padding: 20px;
-            position: relative;
         }
 
         header h1 {
@@ -37,9 +39,10 @@
         }
 
         header img {
+            width: 100%;
+            display: block;
             margin-top: 10px;
-            border-radius: 15px;
-            width: 90%;
+            border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
@@ -47,6 +50,7 @@
         main {
             text-align: center;
             padding: 20px;
+            flex: 1;
         }
 
         main p {
@@ -78,11 +82,13 @@
             padding: 10px;
             position: relative;
             z-index: 1;
+            flex-shrink: 0;
         }
 
         footer p {
             font-size: 14px;
             color: #666;
+            margin: 0;
         }
 
         /* 响应式设计 */
@@ -107,12 +113,12 @@
 
     <!-- 页眉 -->
     <header>
+        <h1>Welcome to 639</h1>
         <img src="images/banner.jpg" alt="Banner">
     </header>
 
     <!-- 主体内容 -->
     <main>
-        <h1>Welcome to 639</h1>
         <p>This is a simple static webpage created as a demo for the 639 Dormitory.</p>
         <button onclick="toggleFullScreen()">切换全屏</button>
     </main>
